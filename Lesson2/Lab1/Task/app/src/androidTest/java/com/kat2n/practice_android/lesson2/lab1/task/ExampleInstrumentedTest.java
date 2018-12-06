@@ -1,4 +1,4 @@
-package com.kat2n.practice_android.twoactivities;
+package com.kat2n.practice_android.lesson2.lab1.task;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     // Context of the app under test.
     Context appContext = InstrumentationRegistry.getTargetContext();
 
-    assertEquals("com.kat2n.practice_android.twoactivities", appContext.getPackageName());
+    assertEquals("com.kat2n.practice_android.lesson2.lab1.task", appContext.getPackageName());
   }
 }

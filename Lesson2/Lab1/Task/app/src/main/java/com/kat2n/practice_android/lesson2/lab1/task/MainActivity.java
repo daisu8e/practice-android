@@ -1,4 +1,4 @@
-package com.kat2n.practice_android.twoactivities;
+package com.kat2n.practice_android.lesson2.lab1.task;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
   private static final String LOG_TAG = MainActivity.class.getSimpleName();
 
-  public static final String EXTRA_MESSAGE = "com.kat2n.practice_android.twoactivities.extra.MESSAGE";
+  public static final String EXTRA_MESSAGE = "com.kat2n.practice_android.lesson2.lab1.task.extra.MESSAGE";
   public static final int TEXT_REQUEST = 1;
 
   private EditText mMessageEditText;

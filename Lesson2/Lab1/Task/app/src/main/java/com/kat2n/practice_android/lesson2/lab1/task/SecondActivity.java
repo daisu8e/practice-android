@@ -1,4 +1,4 @@
-package com.kat2n.practice_android.twoactivities;
+package com.kat2n.practice_android.lesson2.lab1.task;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class SecondActivity extends AppCompatActivity {
 
-  public static final String EXTRA_REPLY = "com.kat2n.practice_android.twoactivities.extra.REPLY";
+  public static final String EXTRA_REPLY = "com.kat2n.practice_android.lesson2.lab1.task.extra.REPLY";
 
   private EditText mReply;
 

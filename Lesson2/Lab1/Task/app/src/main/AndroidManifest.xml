@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.kat2n.practice_android.twoactivities">
+  package="com.kat2n.practice_android.lesson2.lab1.task">
 
   <application
     android:allowBackup="true"
@@ -9,20 +9,20 @@
     android:roundIcon="@mipmap/ic_launcher_round"
     android:supportsRtl="true"
     android:theme="@style/AppTheme">
-    <activity android:name=".MainActivity">
+    <activity android:name="com.kat2n.practice_android.lesson2.lab1.task.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
 
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:name=".SecondActivity"
+    <activity android:name="com.kat2n.practice_android.lesson2.lab1.task.SecondActivity"
       android:label = "Second Activity"
-      android:parentActivityName=".MainActivity">
+      android:parentActivityName="com.kat2n.practice_android.lesson2.lab1.task.MainActivity">
       <meta-data
         android:name="android.support.PARENT_ACTIVITY"
         android:value=
-          "com.kat2n.practice_android.twoactivities.MainActivity" />
+          "com.kat2n.practice_android.lesson2.lab1.task.MainActivity" />
     </activity>
   </application>
 
