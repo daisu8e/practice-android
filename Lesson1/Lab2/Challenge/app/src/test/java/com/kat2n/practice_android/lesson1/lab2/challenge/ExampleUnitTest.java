@@ -1,4 +1,4 @@
-package com.kat2n.practice_android.lesson1.lab2.task;
+package com.kat2n.practice_android.lesson1.lab2.challenge;
 
 import org.junit.Test;
 

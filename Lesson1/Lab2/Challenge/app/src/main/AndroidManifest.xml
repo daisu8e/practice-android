@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.kat2n.practice_android.lesson1.lab2.task">
+  package="com.kat2n.practice_android.lesson1.lab2.challenge">
 
   <application
     android:allowBackup="true"
