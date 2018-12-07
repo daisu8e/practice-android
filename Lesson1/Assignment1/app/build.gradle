@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.github.kat2n.practice_android_assignment1"
+        applicationId "com.kat2n.practice_android.lesson1.assignment1"
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1

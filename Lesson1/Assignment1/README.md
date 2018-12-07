@@ -1,1 +1,0 @@
-# practice-android-assignment1
