@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">practice-android-assignment1</string>
+    <string name="score_label">Score:</string>
+    <string name="score_default">0</string>
+    <string name="question">question</string>
+    <string name="color">color</string>
+</resources>
