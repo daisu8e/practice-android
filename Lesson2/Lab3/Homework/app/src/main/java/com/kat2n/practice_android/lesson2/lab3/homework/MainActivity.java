@@ -2,6 +2,7 @@ package com.kat2n.practice_android.lesson2.lab3.homework;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.provider.MediaStore;
 import android.support.v4.app.ShareCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -56,5 +57,14 @@ public class MainActivity extends AppCompatActivity {
         .setChooserTitle("Share this text with: ")
         .setText(txt)
         .startChooser();
+  }
+
+  public void takePicture(View view) {
+    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+    if (intent.resolveActivity(getPackageManager()) != null) {
+      startActivity(intent);
+    } else {
+      Log.d("ImplicitIntents", "Can't handle this intent!");
+    }
   }
 }
