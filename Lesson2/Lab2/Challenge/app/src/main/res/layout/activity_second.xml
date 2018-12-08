@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  tools:context=".SecondActivity">
+
+  <Button
+    android:id="@+id/riceButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:onClick="touchItemButton"
+    android:text="@string/rice" />
+
+  <Button
+    android:id="@+id/potatoesButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:onClick="touchItemButton"
+    android:text="@string/potatoes" />
+
+  <Button
+    android:id="@+id/carrotsButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:onClick="touchItemButton"
+    android:text="@string/carrots" />
+
+  <Button
+    android:id="@+id/onionsButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:onClick="touchItemButton"
+    android:text="@string/onions" />
+
+  <Button
+    android:id="@+id/curryButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:onClick="touchItemButton"
+    android:text="@string/curry" />
+
+</LinearLayout>
