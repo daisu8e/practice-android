@@ -1,4 +1,4 @@
-package com.kat2n.practice_android.lesson2.lab2.challenge;
+package com.kat2n.practice_android.lesson2.lab3.challenge;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +7,7 @@ import android.view.View;
 
 public class SecondActivity extends AppCompatActivity {
 
-  public static final String EXTRA_ITEM = "com.kat2n.practice_android.lesson2.lab2.challenge.extra.ITEM";
+  public static final String EXTRA_ITEM = "com.kat2n.practice_android.lesson2.lab3.challenge.extra.ITEM";
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.kat2n.practice_android.lesson2.lab2.challenge">
+  package="com.kat2n.practice_android.lesson2.lab3.challenge">
 
   <application
     android:allowBackup="true"
@@ -21,7 +21,7 @@
       android:parentActivityName=".MainActivity" >
       <meta-data
         android:name="android.support.PARENT_ACTIVITY"
-        android:value="com.kat2n.practice_android.lesson2.lab2.challenge.MainActivity" />
+        android:value="com.kat2n.practice_android.lesson2.lab3.challenge.MainActivity" />
     </activity>
   </application>
 
