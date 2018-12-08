@@ -1,4 +1,5 @@
 <resources>
+
   <string name="app_name">Challenge</string>
   <string name="add_item_button">Add item</string>
   <string name="rice">Rice</string>
@@ -6,4 +7,8 @@
   <string name="carrots">Carrots</string>
   <string name="onions">Onions</string>
   <string name="curry">Curry</string>
+
+  <string name="edittext_loc">Golden Gate Bridge</string>
+  <string name="button_loc">Open Location</string>
+
 </resources>
