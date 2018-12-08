@@ -1,0 +1,9 @@
+<resources>
+  <string name="app_name">Challenge</string>
+  <string name="add_item_button">Add item</string>
+  <string name="rice">Rice</string>
+  <string name="potatoes">Potatoes</string>
+  <string name="carrots">Carrots</string>
+  <string name="onions">Onions</string>
+  <string name="curry">Curry</string>
+</resources>
