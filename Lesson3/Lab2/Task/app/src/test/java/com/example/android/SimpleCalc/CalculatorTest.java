@@ -25,6 +25,7 @@ import org.junit.runners.JUnit4;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.number.IsCloseTo.closeTo;
 import static org.junit.Assert.assertThat;
 
 /**
@@ -34,25 +35,70 @@ import static org.junit.Assert.assertThat;
 @SmallTest
 public class CalculatorTest {
 
-    private Calculator mCalculator;
+  private Calculator mCalculator;
 
-    /**
-     * Set up the environment for testing
-     */
-    @Before
-    public void setUp() {
-        mCalculator = new Calculator();
-    }
+  /**
+   * Set up the environment for testing
+   */
+  @Before
+  public void setUp() {
+    mCalculator = new Calculator();
+  }
 
-    /**
-     * Test for simple addition
-     */
-    @Test
-    public void addTwoNumbers() {
-        double resultAdd = mCalculator.add(1d, 1d);
-        assertThat(resultAdd, is(equalTo(2d)));
-    }
+  /**
+   * Test for simple addition
+   */
+  @Test
+  public void addTwoNumbers() {
+    double resultAdd = mCalculator.add(1d, 1d);
+    assertThat(resultAdd, is(equalTo(2d)));
+  }
 
+  @Test
+  public void addTwoNumbersNegative() {
+    double resultAdd = mCalculator.add(-1d, 2d);
+    assertThat(resultAdd, is(equalTo(1d)));
+  }
 
+  @Test
+  public void addTwoNumbersFloats() {
+    double resultAdd = mCalculator.add(1.111f, 1.111d);
+    assertThat(resultAdd, is(closeTo(2.222, 0.01)));
+  }
 
+  @Test
+  public void subTwoNumbers() {
+    double resultAdd = mCalculator.sub(1d, 1d);
+    assertThat(resultAdd, is(equalTo(0d)));
+  }
+
+  @Test
+  public void subWorksWithNegativeResults () {
+    double resultAdd = mCalculator.sub(1d, 2d);
+    assertThat(resultAdd, is(equalTo(-1d)));
+  }
+
+  @Test
+  public void mulTwoNumbers() {
+    double resultAdd = mCalculator.mul(2d, 3d);
+    assertThat(resultAdd, is(equalTo(6d)));
+  }
+
+  @Test
+  public void mulTwoNumbersZero() {
+    double resultAdd = mCalculator.mul(2d, 0d);
+    assertThat(resultAdd, is(equalTo(0d)));
+  }
+
+  @Test
+  public void divTwoNumbers() {
+    double resultAdd = mCalculator.div(4d, 2d);
+    assertThat(resultAdd, is(equalTo(2d)));
+  }
+
+  @Test
+  public void divTwoNumbersZero() {
+    double resultAdd = mCalculator.div(4d, 0d);
+    assertThat(resultAdd, is(equalTo(Double.POSITIVE_INFINITY)));
+  }
 }
