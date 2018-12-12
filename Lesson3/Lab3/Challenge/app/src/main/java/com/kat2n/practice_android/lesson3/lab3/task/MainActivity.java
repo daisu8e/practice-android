@@ -1,5 +1,6 @@
 package com.kat2n.practice_android.lesson3.lab3.task;
 
+import android.os.Build;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -37,7 +38,14 @@ public class MainActivity extends AppCompatActivity {
     Random random = new Random();
     String colorName = mColorArray[random.nextInt(20)];
     int colorResourceName = getResources().getIdentifier(colorName, "color", getApplicationContext().getPackageName());
-    int colorRes = ContextCompat.getColor(this, colorResourceName);
+
+    int colorRes;
+    if (Build.VERSION.SDK_INT >= 23) {
+      colorRes = getResources().getColor(colorResourceName, this.getTheme());
+    } else {
+      colorRes = ContextCompat.getColor(this, colorResourceName);
+    }
+
     mHelloTextView.setTextColor(colorRes);
   }
 }
