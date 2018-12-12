@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.kat2n.practice_android.lesson3.lab3.task"
+        applicationId "com.kat2n.practice_android.lesson3.lab3.homework"
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1

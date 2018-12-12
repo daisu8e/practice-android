@@ -1,4 +1,4 @@
-package com.kat2n.practice_android.lesson3.lab3.task;
+package com.kat2n.practice_android.lesson3.lab3.homework;
 
 import org.junit.Test;
 
