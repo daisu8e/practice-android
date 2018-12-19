@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  tools:context="com.kat2n.practice_android.lesson4.lab5.task.MainActivity">
+  <item
+    android:id="@+id/reset"
+    android:orderInCategory="10"
+    android:title="@string/reset"
+    android:icon="@drawable/ic_reset"
+    app:showAsAction="ifRoom" />
+  <item
+    android:id="@+id/action_settings"
+    android:orderInCategory="100"
+    android:title="@string/action_settings"
+    app:showAsAction="never" />
+</menu>
