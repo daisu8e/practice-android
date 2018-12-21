@@ -7,6 +7,6 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface RandomUserService {
-    @GET("?nat=ca")
-    Call<ContactList> listContacts(@Query("results") int num);
+  @GET("?nat=ca")
+  Call<ContactList> listContacts(@Query("results") int num);
 }
