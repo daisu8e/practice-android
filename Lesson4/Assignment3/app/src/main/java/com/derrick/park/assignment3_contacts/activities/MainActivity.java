@@ -12,6 +12,7 @@ import android.view.MenuItem;
 
 import com.derrick.park.assignment3_contacts.R;
 import com.derrick.park.assignment3_contacts.activities.contact_list.Adapter;
+import com.derrick.park.assignment3_contacts.activities.contact_list.StickyHeaderItemDecoration;
 import com.derrick.park.assignment3_contacts.models.Contact;
 import com.derrick.park.assignment3_contacts.models.ContactList;
 import com.derrick.park.assignment3_contacts.network.ContactClient;
@@ -87,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
     contactList = findViewById(R.id.contact_list);
     contactList.setLayoutManager(new LinearLayoutManager(this));
     contactList.setAdapter(new Adapter(contacts));
+    contactList.addItemDecoration(new StickyHeaderItemDecoration());
   }
 
   private void render(Contact contact) {

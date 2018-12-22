@@ -14,6 +14,10 @@ import java.util.Collections;
 
 public class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
+  public static final int VIEW_TYPE_HEADER = 0;
+  public static final int VIEW_TYPE_DATA = 1;
+  public static final int VIEW_TYPE_UNKNOWN = -1;
+
   private ArrayList<Contact> contacts;
   private ArrayList<Item> items;
 
@@ -25,9 +29,9 @@ public class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
   @Override
   public int getItemViewType(int position) {
     Item item = items.get(position);
-    if (item instanceof Header) return 0;
-    else if (item instanceof Data) return 1;
-    return -1;
+    if (item instanceof Header) return VIEW_TYPE_HEADER;
+    else if (item instanceof Data) return VIEW_TYPE_DATA;
+    return VIEW_TYPE_UNKNOWN;
   }
 
   @NonNull
@@ -36,10 +40,10 @@ public class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     LayoutInflater layoutInflater = LayoutInflater.from(viewGroup.getContext());
     View view;
     switch (viewType) {
-      case 0:
+      case VIEW_TYPE_HEADER:
         view = layoutInflater.inflate(R.layout.list_item_header, viewGroup, false);
         return new HeaderViewHolder(view);
-      case 1:
+      case VIEW_TYPE_DATA:
         view = layoutInflater.inflate(R.layout.list_item_data, viewGroup, false);
         return new DataViewHolder(view);
     }
@@ -65,6 +69,14 @@ public class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     contacts.add(contact);
     parse();
     notifyDataSetChanged();
+  }
+
+  public boolean isHeader(int position) {
+    return getItemViewType(position) == VIEW_TYPE_HEADER;
+  }
+
+  public ArrayList<Item> getItems() {
+    return items;
   }
 
 
