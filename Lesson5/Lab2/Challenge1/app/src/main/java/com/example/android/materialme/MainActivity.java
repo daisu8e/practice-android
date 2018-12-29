@@ -50,14 +50,15 @@ public class MainActivity extends AppCompatActivity {
   }
 
   private void initializeData() {
-    String[] sportsList = getResources().getStringArray(R.array.sports_titles);
+    String[] sportsTitles = getResources().getStringArray(R.array.sports_titles);
     String[] sportsInfo = getResources().getStringArray(R.array.sports_info);
     TypedArray sportsImageResources = getResources().obtainTypedArray(R.array.sports_images);
+    String[] sportsDetails = getResources().getStringArray(R.array.sports_details);
 
     mSportsData.clear();
 
-    for(int i = 0; i < sportsList.length; i++) {
-      mSportsData.add(new Sport(sportsList[i],sportsInfo[i], sportsImageResources.getResourceId(i,0)));
+    for(int i = 0; i < sportsTitles.length; i++) {
+      mSportsData.add(new Sport(sportsTitles[i], sportsInfo[i], sportsImageResources.getResourceId(i,0), sportsDetails[i]));
     }
 
     sportsImageResources.recycle();

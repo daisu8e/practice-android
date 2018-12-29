@@ -65,11 +65,12 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder> {
 
     @Override
     public void onClick(View v) {
-      Sport currentSport = mSportsData.get(getAdapterPosition());
-      Intent detailIntent = new Intent(mContext, DetailActivity.class);
-      detailIntent.putExtra("title", currentSport.getTitle());
-      detailIntent.putExtra("image_resource", currentSport.getImageResource());
-      mContext.startActivity(detailIntent);
+      Sport sport = mSportsData.get(getAdapterPosition());
+      Intent intent = new Intent(mContext, DetailActivity.class);
+      intent.putExtra("title", sport.getTitle());
+      intent.putExtra("image_resource", sport.getImageResource());
+      intent.putExtra("detail", sport.getDetail());
+      mContext.startActivity(intent);
     }
   }
 }
