@@ -1,8 +1,11 @@
 package com.example.android.materialme;
 
+import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,10 +28,8 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder> {
   }
 
   @Override
-  public SportsAdapter.ViewHolder onCreateViewHolder(
-    ViewGroup parent, int viewType) {
-    return new ViewHolder(LayoutInflater.from(mContext).
-      inflate(R.layout.list_item, parent, false));
+  public SportsAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    return new ViewHolder(LayoutInflater.from(mContext).inflate(R.layout.list_item, parent, false));
   }
 
   @Override
@@ -65,11 +66,18 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder> {
 
     @Override
     public void onClick(View v) {
+//      Sport currentSport = mSportsData.get(getAdapterPosition());
+//      Intent intent = new Intent(mContext, DetailActivity.class);
+//      intent.putExtra("title", currentSport.getTitle());
+//      intent.putExtra("image_resource", currentSport.getImageResource());
+//      mContext.startActivity(intent);
+
       Sport currentSport = mSportsData.get(getAdapterPosition());
-      Intent detailIntent = new Intent(mContext, DetailActivity.class);
-      detailIntent.putExtra("title", currentSport.getTitle());
-      detailIntent.putExtra("image_resource", currentSport.getImageResource());
-      mContext.startActivity(detailIntent);
+      Intent intent = new Intent(mContext, DetailActivity.class);
+      intent.putExtra("title", currentSport.getTitle());
+      intent.putExtra("image_resource", currentSport.getImageResource());
+      ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation((Activity)mContext, mSportsImage, "sportsImage");
+      mContext.startActivity(intent, options.toBundle());
     }
   }
 }
