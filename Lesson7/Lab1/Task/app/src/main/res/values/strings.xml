@@ -1,0 +1,5 @@
+<resources>
+  <string name="app_name">Task</string>
+  <string name="ready_to_start">I am ready to start work!</string>
+  <string name="napping">"Napping…"</string>
+</resources>
