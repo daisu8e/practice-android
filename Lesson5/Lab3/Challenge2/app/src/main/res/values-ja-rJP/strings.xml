@@ -1,0 +1,57 @@
+<resources>
+  <string name="app_name">私に材料を！</string>
+  <string name="title_placeholder">タイトル</string>
+  <string name="news_placeholder">ニュース</string>
+  <string name="sports_info_placeholder">Loremイプサムdolor座ってamet、conittetur adipiscing elit。 Duis pellentesqueダイヤモンドベルメンタルポルタ。エオニア調味料pharetra scelerisque。 NAM nec odio nec enles malesuada volutpat。 Proin egestasはrisus、posdapibusは8月sagittis nonを所有しています。 Morbi ultricies sollicitudin arcu。 Nunc ligula ligula、laoreet et nulla eget、porta dictum libero。優位性のあるaliquam lobortis nisiは、卵巣炎を治療します。
+
+Ut molestie nisi eu porta fringilla。 Nulla non tincidunt erat。 Donec scelerisque feugiat augue履歴書vehicleicula。 Maecenas cursus turpis ac consectetur tempus。 Vivamus quis justo rutrum、ルクタスアンティキス、ペレンテスクロレム。 consectetur nisiの前庭。 Aliquam Vitae lobortis tortor、ベルラオレットニシ。前庭前肛門前腹裂が肘口窩部裂孔および前頸部に発生する。 Orci varius natoque penatibusとmagnis disparturient montes、nascetur ridiculus mus。奇妙な究極のメトスとヴェルテ・ポルタなど、外陰部のファレトラ。最新のlac、convallis quis maximus non、aliquet quis dui。
+
+Nunc enim ex、dapibus ac convallis id、tinciduntはamet tortorに座っています。 dapibus tellusの中ではtortor tempor vehicleをキスしています。 maximus nisl blanditのSuspendisse blandit nisi idネクストポーター。 Nullam ultricesはpharetra elit elementum dignissimを消します。 Vivamus tempus libero fermentum mauris tempor elementum。クラスポルタ、リグーラ・キス・ポルタ不法、最新の発酵性ドロル、ラオレ・リグーラ・ヴェリット・セード・オルシ。ドネツクセラーリス、クアムシットアメッドウラムコーパーファレトラ、リベロベリット効率化テスト、ID加法的トルター機能なし。 Mauris urna massa、scelerisque、amet、riset、egestas pulvinar diamの順に座ってください。 Sed arcu magna、effeiturに座ってanmet ante nec、邪魔にならないmattis velitを。エジェスタドロールのヌラム。前庭角窩モーリスと潰瘍性潰瘍。
+
+Pellentesque eros magna、nec tinciduntに座ってamet、auctorのconquat urnaを主張してください。ヘンドレリットソリシチシン湖オルナレプラセラート。 Donec eu dui nibh。 Fusce accumsan、nisl nec ultrices cursus、vele libero finibus ligula、et pulvinar eros purusは、amet erosです。効率的なvolppatマッサ。 Ut tristique enim eu lectusはfringillaを主張します。 Nunc risus justo、nevのconvallisに座っていること、euismod molestie leo。奇妙なinterdum、arcuベルエジェスタファレトラ、sem lorem sagittis metus、turpisでヴェルディクタムdiam purus。 Mauris faucibus ligula、nibh dictum、quis sempre、urnaの移植者。 Nullam dictum dapibus justo、nec temporマッサfeugiat id。 Maecenas quis nisi Vehicula、viverra nunc id、feugiat enim。ヌルテンポラヴェネナティスポーター。 Nulla dignissim elementum eros、eu elementum mauris laciniaなど。 Duis vel purus scelerisque、varius eros vitae、finibus magna。 Pellentesqueの住人morbi tristique senectus et netus et malesuada名声ac turpisエジェスタVivamus ut nunc vitae erat bibendum iaculis。
+
+Nulla diamでDonec。 malesuadaでFapce dapibus ut diam。 ultricies maurisで、tincidunt enimを使用しないでください。 Curabitur augue risus dignissimでPraesent varius sed felis。 Aenean rhoncus tempor eros、eleictnd dictum metus sodales quis。 Aliquam erat volutpat Dictum odioのNulla ligulaを完成させ、fringilla ultricesをダイヤモンドに施します。 Praesentイプサムオディオ、モレスティノンオークションベル、Ve​​hicula eget dolor。 eros ut purusでの整数は、bibendum eu id miです。 Quisque felis est、blandit quis semperはamet、blandit vel turpisに座ります。 Duis tempor eu eros id aliquet。</string>
+
+  <string-array name="sports_titles">
+    <item>野球</item>
+    <item>バドミントン</item>
+    <item>バスケットボール</item>
+    <item>ボーリング</item>
+    <item>サイクリング</item>
+    <item>ゴルフ</item>
+    <item>ランニング</item>
+    <item>フットボール</item>
+    <item>水泳</item>
+    <item>卓球</item>
+    <item>テニス</item>
+  </string-array>
+
+  <string-array name="sports_info">
+    <item>これが野球のニュースです。</item>
+    <item>これがバドミントンのニュースです。</item>
+    <item>これはバスケットボールのニュースです。</item>
+    <item>ここにいくつかのボウリングニュースがあります！</item>
+    <item>ここにいくつかのサイクリングニュースがあります！</item>
+    <item>これはいくつかのゴルフニュースです！</item>
+    <item>ここにいくつかのランニングニュースがあります！</item>
+    <item>これがフットボールのニュースです。</item>
+    <item>ここにいくつかの水泳のニュースがあります！</item>
+    <item>これは卓球のニュースです。</item>
+    <item>これはテニスのニュースです。</item>
+  </string-array>
+
+  <array name="sports_images">
+    <item>@drawable/img_baseball</item>
+    <item>@drawable/img_badminton</item>
+    <item>@drawable/img_basketball</item>
+    <item>@drawable/img_bowling</item>
+    <item>@drawable/img_cycling</item>
+    <item>@drawable/img_golf</item>
+    <item>@drawable/img_running</item>
+    <item>@drawable/img_soccer</item>
+    <item>@drawable/img_swimming</item>
+    <item>@drawable/img_tabletennis</item>
+    <item>@drawable/img_tennis</item>
+  </array>
+
+</resources>
