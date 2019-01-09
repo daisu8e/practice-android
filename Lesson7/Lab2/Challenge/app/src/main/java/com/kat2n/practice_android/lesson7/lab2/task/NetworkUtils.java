@@ -18,6 +18,7 @@ public class NetworkUtils {
   private static final String QUERY_PARAM = "q";
   private static final String MAX_RESULTS = "maxResults";
   private static final String PRINT_TYPE = "printType";
+  private static final String DOWNLOAD = "download";
 
   static String getBookInfo(String queryString){
     HttpURLConnection urlConnection = null;
@@ -28,6 +29,7 @@ public class NetworkUtils {
         .appendQueryParameter(QUERY_PARAM, queryString)
         .appendQueryParameter(MAX_RESULTS, "10")
         .appendQueryParameter(PRINT_TYPE, "books")
+        .appendQueryParameter(DOWNLOAD, "epub")
         .build();
 
       Log.d("xxx", builtURI.toString());
