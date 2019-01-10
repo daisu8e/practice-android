@@ -1,0 +1,11 @@
+<resources>
+  <string name="app_name">Homework</string>
+  <string-array name="url_options">
+    <item>http://</item>
+    <item>https://</item>
+  </string-array>
+  <string name="loading">Loading...</string>
+  <string name="no_search_term">Please enter a search term</string>
+  <string name="no_network">Please check your network connection and try again.</string>
+  <string name="no_results">"No Results Found"</string>
+</resources>
