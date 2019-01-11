@@ -18,13 +18,9 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    IntentFilter filter = new IntentFilter();
-    filter.addAction(Intent.ACTION_POWER_DISCONNECTED);
-    filter.addAction(Intent.ACTION_POWER_CONNECTED);
-
-    this.registerReceiver(mReceiver, filter);
-
-    LocalBroadcastManager.getInstance(this).registerReceiver(mReceiver, new IntentFilter(ACTION_CUSTOM_BROADCAST));
+    receivePowerBroadcast();
+    receiveCustomeBroadcast();
+    receiveHeadsetPlugBroadcast();
   }
 
   @Override
@@ -37,5 +33,20 @@ public class MainActivity extends AppCompatActivity {
   public void sendCustomBroadcast(View view) {
     Intent customBroadcastIntent = new Intent(ACTION_CUSTOM_BROADCAST);
     LocalBroadcastManager.getInstance(this).sendBroadcast(customBroadcastIntent);
+  }
+
+  private void receivePowerBroadcast() {
+    IntentFilter filter = new IntentFilter();
+    filter.addAction(Intent.ACTION_POWER_DISCONNECTED);
+    filter.addAction(Intent.ACTION_POWER_CONNECTED);
+    this.registerReceiver(mReceiver, filter);
+  }
+
+  private void receiveCustomeBroadcast() {
+    LocalBroadcastManager.getInstance(this).registerReceiver(mReceiver, new IntentFilter(ACTION_CUSTOM_BROADCAST));
+  }
+
+  private void receiveHeadsetPlugBroadcast() {
+    this.registerReceiver(mReceiver, new IntentFilter(Intent.ACTION_HEADSET_PLUG));
   }
 }
