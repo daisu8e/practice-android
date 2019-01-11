@@ -22,7 +22,8 @@ public class CustomReceiver extends BroadcastReceiver {
           toastMessage = "Power disconnected!";
           break;
         case ACTION_CUSTOM_BROADCAST:
-          toastMessage = "Custom Broadcast Received";
+          int randomNumber = Integer.parseInt(intent.getStringExtra("RANDOM_NUMBER"));
+          toastMessage = "Custom Broadcast Received\nSquare of the Random number: " + (randomNumber * randomNumber);
           break;
         case Intent.ACTION_HEADSET_PLUG:
           toastMessage = "Headset plug changed";
