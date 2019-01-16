@@ -93,8 +93,7 @@ public class MainActivity extends AppCompatActivity {
     Bitmap androidImage = BitmapFactory.decodeResource(getResources(),R.drawable.mascot_1);
     NotificationCompat.Builder notifyBuilder = getNotificationBuilder();
     notifyBuilder
-      .setStyle(new NotificationCompat.BigPictureStyle()
-      .bigPicture(androidImage)
+      .setStyle(new NotificationCompat.InboxStyle()
       .setBigContentTitle("Notification Updated!"));
     mNotifyManager.notify(NOTIFICATION_ID, notifyBuilder.build());
     setNotificationButtonState(false, false, true);
