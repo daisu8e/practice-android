@@ -9,9 +9,14 @@ import android.graphics.Color;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.format.DateFormat;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 import android.widget.ToggleButton;
+
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -52,12 +57,23 @@ public class MainActivity extends AppCompatActivity {
           mNotificationManager.cancelAll();
           toastMessage = "Stand Up Alarm Off!";
         }
-        Toast.makeText(MainActivity.this, toastMessage,Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this, toastMessage, Toast.LENGTH_SHORT).show();
       }
     });
 
     boolean alarmUp = (PendingIntent.getBroadcast(this, NOTIFICATION_ID, notifyIntent, PendingIntent.FLAG_NO_CREATE) != null);
     alarmToggle.setChecked(alarmUp);
+
+    Button nextAlarmButton = findViewById(R.id.nextAlarmButton);
+    nextAlarmButton.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        AlarmManager.AlarmClockInfo alarmClockInfo = alarmManager.getNextAlarmClock();
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(alarmClockInfo.getTriggerTime());
+        Toast.makeText(MainActivity.this, DateFormat.format("EEEE, MMMM d, yyyy 'at' h:mm a", calendar), Toast.LENGTH_SHORT).show();
+      }
+    });
 
     createNotificationChannel();
   }
@@ -73,4 +89,5 @@ public class MainActivity extends AppCompatActivity {
       mNotificationManager.createNotificationChannel(notificationChannel);
     }
   }
+
 }
