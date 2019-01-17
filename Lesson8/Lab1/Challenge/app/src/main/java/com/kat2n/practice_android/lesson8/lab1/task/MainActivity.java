@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
   private static final String PRIMARY_CHANNEL_ID = "primary_notification_channel";
   private static final int NOTIFICATION_ID = 0;
   private static final String ACTION_UPDATE_NOTIFICATION = BuildConfig.APPLICATION_ID + ".ACTION_UPDATE_NOTIFICATION";
+  private static final String ACTION_DELETE_NOTIFICATION = BuildConfig.APPLICATION_ID + ".ACTION_DELETE_NOTIFICATION";
 
   private Button button_notify;
   private Button button_cancel;
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
     createNotificationChannel();
     setNotificationButtonState(true, false, false);
     registerReceiver(mReceiver, new IntentFilter(ACTION_UPDATE_NOTIFICATION));
+    registerReceiver(mReceiver, new IntentFilter(ACTION_DELETE_NOTIFICATION));
   }
 
   @Override
@@ -71,8 +73,14 @@ public class MainActivity extends AppCompatActivity {
   public void sendNotification() {
     Intent updateIntent = new Intent(ACTION_UPDATE_NOTIFICATION);
     PendingIntent updatePendingIntent = PendingIntent.getBroadcast(this, NOTIFICATION_ID, updateIntent, PendingIntent.FLAG_ONE_SHOT);
+
+    Intent deleteIntent = new Intent(ACTION_DELETE_NOTIFICATION);
+    PendingIntent deletePendingIntent = PendingIntent.getBroadcast(this, NOTIFICATION_ID, deleteIntent, PendingIntent.FLAG_ONE_SHOT);
+
     NotificationCompat.Builder notifyBuilder = getNotificationBuilder();
-    notifyBuilder.addAction(R.drawable.ic_update, "Update Notification", updatePendingIntent);
+    notifyBuilder
+      .addAction(R.drawable.ic_update, "Update Notification", updatePendingIntent)
+      .setDeleteIntent(deletePendingIntent);
     mNotifyManager.notify(NOTIFICATION_ID, notifyBuilder.build());
     setNotificationButtonState(false, true, true);
   }
@@ -132,7 +140,17 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-      updateNotification();
+      String intentAction = intent.getAction();
+      if (intentAction != null) {
+        switch (intentAction){
+          case ACTION_UPDATE_NOTIFICATION:
+            updateNotification();
+            break;
+          case ACTION_DELETE_NOTIFICATION:
+            cancelNotification();
+            break;
+        }
+      }
     }
   }
 }
