@@ -13,6 +13,9 @@ import android.widget.CompoundButton;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import java.util.Calendar;
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
   private static final int NOTIFICATION_ID = 0;
@@ -37,20 +40,23 @@ public class MainActivity extends AppCompatActivity {
       public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
         String toastMessage;
         if(isChecked){
-          //long repeatInterval = AlarmManager.INTERVAL_FIFTEEN_MINUTES;
-          long repeatInterval = 1 * 1000;
-          long triggerTime = SystemClock.elapsedRealtime() + repeatInterval;
+          Calendar calendar = Calendar.getInstance();
+          calendar.setTimeInMillis(System.currentTimeMillis());
+          calendar.set(Calendar.HOUR_OF_DAY, 11);
+          calendar.set(Calendar.MINUTE, 11);
+          long triggerTime = calendar.getTimeInMillis();
+          long repeatInterval = AlarmManager.INTERVAL_DAY;
 
           if (alarmManager != null) {
-            alarmManager.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, triggerTime, repeatInterval, notifyPendingIntent);
+            alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, triggerTime, repeatInterval, notifyPendingIntent);
           }
-          toastMessage = "Stand Up Alarm On!";
+          toastMessage = "Alarm On!";
         } else {
           if (alarmManager != null) {
             alarmManager.cancel(notifyPendingIntent);
           }
           mNotificationManager.cancelAll();
-          toastMessage = "Stand Up Alarm Off!";
+          toastMessage = "Alarm Off!";
         }
         Toast.makeText(MainActivity.this, toastMessage,Toast.LENGTH_SHORT).show();
       }
@@ -65,11 +71,11 @@ public class MainActivity extends AppCompatActivity {
   public void createNotificationChannel() {
     mNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
     if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-      NotificationChannel notificationChannel = new NotificationChannel(PRIMARY_CHANNEL_ID, "Stand up notification", NotificationManager.IMPORTANCE_HIGH);
+      NotificationChannel notificationChannel = new NotificationChannel(PRIMARY_CHANNEL_ID, "Notification", NotificationManager.IMPORTANCE_HIGH);
       notificationChannel.enableLights(true);
       notificationChannel.setLightColor(Color.RED);
       notificationChannel.enableVibration(true);
-      notificationChannel.setDescription("Notifies every 15 minutes to stand up and walk");
+      notificationChannel.setDescription("Notifies every 11:11");
       mNotificationManager.createNotificationChannel(notificationChannel);
     }
   }

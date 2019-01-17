@@ -24,9 +24,9 @@ public class AlarmReceiver extends BroadcastReceiver {
     Intent contentIntent = new Intent(context, MainActivity.class);
     PendingIntent contentPendingIntent = PendingIntent.getActivity(context, NOTIFICATION_ID, contentIntent, PendingIntent.FLAG_UPDATE_CURRENT);
     NotificationCompat.Builder builder = new NotificationCompat.Builder(context, PRIMARY_CHANNEL_ID)
-      .setSmallIcon(R.drawable.ic_stand_up)
-      .setContentTitle("Stand Up Alert")
-      .setContentText("You should stand up and walk around now!")
+      .setSmallIcon(R.drawable.ic_android)
+      .setContentTitle("Make a Wish!")
+      .setContentText("It's 11:11!")
       .setContentIntent(contentPendingIntent)
       .setPriority(NotificationCompat.PRIORITY_HIGH)
       .setAutoCancel(true)
