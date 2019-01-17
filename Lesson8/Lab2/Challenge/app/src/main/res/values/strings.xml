@@ -1,0 +1,5 @@
+<resources>
+  <string name="app_name">Task</string>
+  <string name="alarmToggleOff">Alarm off</string>
+  <string name="alarmToggleOn">Alarm on</string>
+</resources>
