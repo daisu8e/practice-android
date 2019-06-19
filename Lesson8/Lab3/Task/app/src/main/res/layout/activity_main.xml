@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:padding="16dp">
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:text="Network Type Required: "
+    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+  <RadioGroup
+    android:id="@+id/networkOptions"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="4dp"
+    android:orientation="horizontal">
+
+    <RadioButton
+      android:id="@+id/noNetwork"
+      android:text="None"
+      android:checked="true"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
+
+    <RadioButton
+      android:id="@+id/anyNetwork"
+      android:text="Any"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
+
+    <RadioButton
+      android:id="@+id/wifiNetwork"
+      android:text="Wifi"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
+
+  </RadioGroup>
+
+  <Button
+    android:text="Schedule Job"
+    android:onClick="scheduleJob"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="4dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+  <Button
+    android:text="Cancel Jobs"
+    android:onClick="cancelJobs"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="4dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+</LinearLayout>
